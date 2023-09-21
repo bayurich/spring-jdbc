@@ -2,7 +2,6 @@ package ru.netology.jdbctask;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.BufferedReader;
@@ -11,7 +10,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class}) для отключения автоконфигурации
+@SpringBootApplication
 public class JdbcTaskApplication {
 
     public static void main(String[] args) {

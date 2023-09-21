@@ -1,6 +1,5 @@
 package ru.netology.jdbctask.repository;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -12,7 +11,7 @@ import static ru.netology.jdbctask.JdbcTaskApplication.read;
 @Repository
 public class MyRepository {
 
-    private final Statement statement;
+    private Statement statement;
 
     private final String sqlSelectProductName = read("myScript.sql");
 
@@ -33,7 +32,7 @@ public class MyRepository {
             result.add(productName);
         }
 
-        System.out.println(result);
+        System.out.println("MyRepository - getProductName: " + result);
         return result;
     }
 }
